@@ -1,0 +1,567 @@
+/* ==========================================================
+   AMALA GRAND BLEU RESORT - COLOR THEMES SPECIFICATIONS
+   1. Bleu Océan (Andaman & Saphir) - [data-theme="blue"] (Par défaut)
+   2. Clair (Sable Blanc & Ivoire) - [data-theme="light"]
+   3. Chocolat (Moka Intense & Teck Chaud) - [data-theme="chocolate"]
+   ========================================================== */
+
+/* ----------------------------------------------------------
+   THEME 1: BLEU OCÉAN / SAPHIR (PAR DÉFAUT)
+   ---------------------------------------------------------- */
+:root,
+[data-theme="blue"] {
+  --bg-dark: #071521;
+  --bg-card: rgba(12, 30, 44, 0.82);
+  --bg-card-hover: rgba(18, 42, 60, 0.92);
+  --bg-glass: rgba(8, 24, 36, 0.82);
+  --bg-surface: #0b2233;
+  --bg-surface-light: #13334b;
+
+  --gold-primary: #38bdf8;
+  --gold-light: #7dd3fc;
+  --gold-dark: #0284c7;
+  --gold-gradient: linear-gradient(135deg, #7dd3fc 0%, #38bdf8 50%, #0284c7 100%);
+  --gold-glow: rgba(56, 189, 248, 0.35);
+
+  --ocean-teal: #06b6d4;
+  --ocean-glow: rgba(6, 182, 212, 0.35);
+
+  --text-main: #f0f9ff;
+  --text-muted: #94b9d8;
+  --text-dim: #6287a7;
+
+  --border-gold: rgba(56, 189, 248, 0.28);
+  --border-glass: rgba(255, 255, 255, 0.1);
+  --shadow-gold: 0 10px 30px rgba(56, 189, 248, 0.22);
+
+  --theme-btn-bg: rgba(56, 189, 248, 0.12);
+  --theme-top-bg: linear-gradient(90deg, #05101a 0%, #0e273b 50%, #05101a 100%);
+}
+
+[data-theme="blue"] .brand-crest {
+  border-color: #38bdf8;
+  color: #7dd3fc;
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+}
+
+[data-theme="blue"] .btn-luxury {
+  color: #041019;
+}
+
+/* ----------------------------------------------------------
+   THEME 2: CLAIR (SABLE BLANC, IVOIRE & OR CHAMPAGNE)
+   ---------------------------------------------------------- */
+[data-theme="light"] {
+  --bg-dark: #f8f6f0;
+  --bg-card: rgba(255, 255, 255, 0.95);
+  --bg-card-hover: #ffffff;
+  --bg-glass: rgba(255, 255, 255, 0.92);
+  --bg-surface: #ffffff;
+  --bg-surface-light: #f1ebd9;
+
+  --gold-primary: #b38338;
+  --gold-light: #cb9b4a;
+  --gold-dark: #875e1e;
+  --gold-gradient: linear-gradient(135deg, #d8ac58 0%, #b38338 50%, #875e1e 100%);
+  --gold-glow: rgba(179, 131, 56, 0.25);
+
+  --ocean-teal: #0f766e;
+  --ocean-glow: rgba(15, 118, 110, 0.2);
+
+  --text-main: #182530;
+  --text-muted: #536573;
+  --text-dim: #7f91a0;
+
+  --border-gold: rgba(179, 131, 56, 0.32);
+  --border-glass: rgba(0, 0, 0, 0.08);
+  --shadow-sm: 0 4px 15px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 20px 45px rgba(0, 0, 0, 0.12);
+  --shadow-gold: 0 10px 25px rgba(179, 131, 56, 0.25);
+
+  --theme-btn-bg: rgba(179, 131, 56, 0.12);
+  --theme-top-bg: linear-gradient(90deg, #ede6d8 0%, #f6f1e6 50%, #ede6d8 100%);
+}
+
+/* Light Theme Overrides for Maximum Readability & Luxury */
+[data-theme="light"] body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+}
+
+[data-theme="light"] .top-bar {
+  background: var(--theme-top-bg);
+  border-bottom: 1px solid var(--border-gold);
+  color: #3b2c15;
+}
+
+[data-theme="light"] .top-notice {
+  color: #4a381c;
+}
+
+[data-theme="light"] .select-control {
+  background: rgba(255, 255, 255, 0.8);
+  border-color: rgba(179, 131, 56, 0.4);
+  color: #182530;
+}
+
+[data-theme="light"] .select-control select {
+  color: #182530;
+}
+
+[data-theme="light"] .select-control select option {
+  background: #ffffff;
+  color: #182530;
+}
+
+[data-theme="light"] .header {
+  background: rgba(255, 255, 255, 0.94);
+  border-bottom: 1px solid rgba(179, 131, 56, 0.25);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] .header.scrolled {
+  background: rgba(255, 255, 255, 0.98);
+  border-bottom-color: var(--gold-primary);
+}
+
+[data-theme="light"] .brand-crest {
+  border-color: var(--gold-primary);
+  color: var(--gold-dark);
+  background: radial-gradient(circle, rgba(179, 131, 56, 0.15) 0%, transparent 80%);
+  box-shadow: 0 0 15px rgba(179, 131, 56, 0.2);
+}
+
+[data-theme="light"] .brand-name {
+  color: #182530;
+  background: linear-gradient(135deg, #182530 40%, var(--gold-primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+[data-theme="light"] .nav-link {
+  color: #4a5c6a;
+}
+
+[data-theme="light"] .nav-link:hover,
+[data-theme="light"] .nav-link.active {
+  color: #182530;
+}
+
+[data-theme="light"] .menu-toggle span {
+  background-color: #182530;
+}
+
+[data-theme="light"] .nav-menu {
+  background: rgba(255, 255, 255, 0.98);
+}
+
+[data-theme="light"] .btn-luxury {
+  color: #ffffff;
+}
+
+[data-theme="light"] .btn-secondary {
+  background: #ffffff;
+  color: #182530;
+  border-color: var(--border-gold);
+  box-shadow: var(--shadow-sm);
+}
+
+[data-theme="light"] .hero-title {
+  color: #ffffff;
+  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.9);
+}
+
+[data-theme="light"] .hero-subtitle {
+  color: #f1f5f9;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.85);
+}
+
+[data-theme="light"] .booking-bar {
+  background: rgba(255, 255, 255, 0.96);
+  border-color: var(--border-gold);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12), 0 0 30px rgba(179, 131, 56, 0.15);
+}
+
+[data-theme="light"] .booking-input-wrap {
+  background: #f8f6f0;
+  border-color: rgba(0, 0, 0, 0.12);
+  color: #182530;
+}
+
+[data-theme="light"] .booking-input-wrap input,
+[data-theme="light"] .booking-input-wrap select {
+  color: #182530;
+}
+
+[data-theme="light"] .booking-input-wrap select option {
+  background: #ffffff;
+  color: #182530;
+}
+
+[data-theme="light"] .highlight-card,
+[data-theme="light"] .about-float-card,
+[data-theme="light"] .villa-card,
+[data-theme="light"] .dining-feature-box,
+[data-theme="light"] .review-card,
+[data-theme="light"] .loc-item,
+[data-theme="light"] .location-map-card,
+[data-theme="light"] .faq-item {
+  background: #ffffff;
+  border-color: rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow-sm);
+}
+
+[data-theme="light"] .highlight-title,
+[data-theme="light"] .float-badge-title,
+[data-theme="light"] .section-title,
+[data-theme="light"] .villa-card-title,
+[data-theme="light"] .dining-feature-title,
+[data-theme="light"] .author-name,
+[data-theme="light"] .map-address,
+[data-theme="light"] .loc-name,
+[data-theme="light"] .faq-question {
+  color: #182530;
+}
+
+[data-theme="light"] .filter-btn {
+  background: #ffffff;
+  color: #4a5c6a;
+  border-color: rgba(0, 0, 0, 0.12);
+  box-shadow: var(--shadow-sm);
+}
+
+[data-theme="light"] .filter-btn.active {
+  background: var(--gold-gradient);
+  color: #ffffff;
+}
+
+[data-theme="light"] .btn-card-details {
+  background: #f4ede2;
+  border-color: rgba(179, 131, 56, 0.3);
+  color: #182530;
+}
+
+[data-theme="light"] .modal-card {
+  background: #ffffff;
+  border-color: var(--gold-primary);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="light"] .modal-title {
+  color: #182530;
+}
+
+[data-theme="light"] .modal-close-btn {
+  background: #f1ebd9;
+  color: #182530;
+}
+
+[data-theme="light"] .form-control {
+  background: #f8f6f0;
+  border-color: rgba(0, 0, 0, 0.12);
+  color: #182530;
+}
+
+[data-theme="light"] .form-control option {
+  background: #ffffff;
+  color: #182530;
+}
+
+[data-theme="light"] .form-addons {
+  background: #f8f6f0;
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .addon-name {
+  color: #182530;
+}
+
+[data-theme="light"] .booking-summary-box {
+  background: linear-gradient(135deg, rgba(212, 175, 102, 0.2) 0%, #f6f1e6 100%);
+  border-color: var(--border-gold);
+}
+
+[data-theme="light"] .footer {
+  background: #141c22;
+  border-top-color: var(--gold-primary);
+}
+
+/* ----------------------------------------------------------
+   THEME 3: CHOCOLAT (MOKA INTENSE, TECK & AMBRE CHAUD)
+   ---------------------------------------------------------- */
+[data-theme="chocolate"] {
+  --bg-dark: #150d09;
+  --bg-card: rgba(33, 21, 15, 0.85);
+  --bg-card-hover: rgba(46, 30, 22, 0.94);
+  --bg-glass: rgba(24, 16, 11, 0.85);
+  --bg-surface: #221610;
+  --bg-surface-light: #342219;
+
+  --gold-primary: #d4a373;
+  --gold-light: #fef0db;
+  --gold-dark: #a97544;
+  --gold-gradient: linear-gradient(135deg, #faedcd 0%, #d4a373 50%, #a97544 100%);
+  --gold-glow: rgba(212, 163, 115, 0.35);
+
+  --ocean-teal: #d97706;
+  --ocean-glow: rgba(217, 119, 6, 0.35);
+
+  --text-main: #fefae0;
+  --text-muted: #d8c5b6;
+  --text-dim: #9c8474;
+
+  --border-gold: rgba(212, 163, 115, 0.28);
+  --border-glass: rgba(255, 255, 255, 0.08);
+  --shadow-gold: 0 10px 30px rgba(212, 163, 115, 0.25);
+
+  --theme-btn-bg: rgba(212, 163, 115, 0.15);
+  --theme-top-bg: linear-gradient(90deg, #110906 0%, #26160e 50%, #110906 100%);
+}
+
+[data-theme="chocolate"] .brand-crest {
+  border-color: #d4a373;
+  color: #faedcd;
+  box-shadow: 0 0 15px rgba(212, 163, 115, 0.4);
+}
+
+[data-theme="chocolate"] .btn-luxury {
+  color: #190e09;
+}
+
+[data-theme="chocolate"] .footer {
+  background: #0d0705;
+  border-top-color: #d4a373;
+}
+
+/* ----------------------------------------------------------
+   THEME SWITCHER CONTROLS STYLING
+   ---------------------------------------------------------- */
+.theme-selector-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-full);
+  padding: 3px 6px;
+}
+
+[data-theme="light"] .theme-selector-group {
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(179, 131, 56, 0.35);
+}
+
+.theme-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  transition: all 0.25s ease;
+  line-height: 1;
+}
+
+.theme-pill-btn .color-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: var(--radius-full);
+  display: inline-block;
+}
+
+.theme-pill-btn.btn-theme-blue .color-dot {
+  background: #38bdf8;
+  box-shadow: 0 0 6px rgba(56, 189, 248, 0.8);
+}
+
+.theme-pill-btn.btn-theme-light .color-dot {
+  background: #f59e0b;
+  box-shadow: 0 0 6px rgba(245, 158, 11, 0.8);
+}
+
+.theme-pill-btn.btn-theme-chocolate .color-dot {
+  background: #b07d50;
+  box-shadow: 0 0 6px rgba(176, 125, 80, 0.8);
+}
+
+.theme-pill-btn:hover {
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="light"] .theme-pill-btn:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.theme-pill-btn.active {
+  background: var(--gold-gradient);
+  color: #0b1a22 !important;
+  box-shadow: 0 2px 10px var(--gold-glow);
+}
+
+[data-theme="chocolate"] .theme-pill-btn.active {
+  color: #1a0e08 !important;
+}
+
+[data-theme="light"] .theme-pill-btn.active {
+  color: #ffffff !important;
+}
+
+/* ----------------------------------------------------------
+   NAVBAR THEME PILLS
+   ---------------------------------------------------------- */
+.navbar-theme-pills {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-full);
+  padding: 4px 6px;
+}
+
+[data-theme="light"] .navbar-theme-pills {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(179, 131, 56, 0.35);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ----------------------------------------------------------
+   FLOATING THEME DOCK (ALWAYS VISIBLE & PROMINENT)
+   ---------------------------------------------------------- */
+.floating-theme-dock {
+  position: fixed;
+  bottom: 25px;
+  left: 25px;
+  z-index: 990;
+  background: var(--bg-card);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+  border: 1.5px solid var(--border-gold);
+  border-radius: var(--radius-full);
+  padding: 6px 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: var(--shadow-lg), 0 0 25px var(--gold-glow);
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+[data-theme="light"] .floating-theme-dock {
+  background: rgba(255, 255, 255, 0.96);
+  border-color: var(--gold-primary);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15), 0 0 20px rgba(179, 131, 56, 0.2);
+}
+
+.theme-dock-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gold-light);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding-right: 4px;
+  border-right: 1px solid var(--border-glass);
+}
+
+[data-theme="light"] .theme-dock-title {
+  color: var(--gold-dark);
+  border-right-color: rgba(0, 0, 0, 0.1);
+}
+
+.dock-theme-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 14px;
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid transparent;
+  transition: all 0.25s ease;
+}
+
+[data-theme="light"] .dock-theme-btn {
+  background: #f4ede2;
+  color: #334155;
+}
+
+.dock-theme-btn:hover {
+  transform: translateY(-2px);
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.12);
+  border-color: var(--border-gold);
+}
+
+[data-theme="light"] .dock-theme-btn:hover {
+  background: #ffffff;
+  color: #0f172a;
+  border-color: var(--gold-primary);
+}
+
+.dock-swatch {
+  width: 14px;
+  height: 14px;
+  border-radius: var(--radius-full);
+  display: inline-block;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+}
+
+.dock-swatch.blue-swatch {
+  background: linear-gradient(135deg, #7dd3fc 0%, #0284c7 100%);
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.8);
+}
+
+.dock-swatch.light-swatch {
+  background: linear-gradient(135deg, #ffffff 0%, #f59e0b 100%);
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.8);
+}
+
+.dock-swatch.chocolate-swatch {
+  background: linear-gradient(135deg, #d4a373 0%, #4a2810 100%);
+  box-shadow: 0 0 10px rgba(176, 125, 80, 0.8);
+}
+
+.dock-theme-btn.active {
+  background: var(--gold-gradient) !important;
+  color: #0b1a22 !important;
+  font-weight: 700;
+  box-shadow: 0 4px 15px var(--gold-glow);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+[data-theme="chocolate"] .dock-theme-btn.active {
+  color: #1a0e08 !important;
+}
+
+[data-theme="light"] .dock-theme-btn.active {
+  color: #ffffff !important;
+}
+
+@media (max-width: 640px) {
+  .floating-theme-dock {
+    bottom: 15px;
+    left: 15px;
+    padding: 5px 10px;
+    gap: 4px;
+  }
+  .theme-dock-title {
+    display: none;
+  }
+  .dock-theme-btn {
+    padding: 6px 10px;
+    font-size: 0.75rem;
+  }
+}

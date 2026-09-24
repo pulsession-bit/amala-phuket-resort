@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amala Grand Bleu Resort Phuket | Villas avec Piscine Privée & Vue Mer Kamala</title>
+  <meta name="description" content="Découvrez l'Amala Grand Bleu Resort Hilltops à Kamala, Phuket. Villas luxueuses avec piscine privée, vue panoramique sur la mer d'Andaman, restaurant certifié Halal et petit-déjeuner flottant.">
+  <meta name="keywords" content="Amala Phuket, Amala Grand Bleu Resort, villa piscine privée Phuket, hôtel Kamala Phuket, resort de luxe Phuket, hôtel halal Phuket, floating breakfast Phuket">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Amala Grand Bleu Resort Hilltops • Kamala, Phuket">
+  <meta property="og:description" content="Sanctuaire d'exception avec piscines privées et vue panoramique sur l'océan à Kamala, Phuket.">
+  <meta property="og:image" content="assets/images/hero.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/themes.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-theme="blue">
+
+  <!-- Top Notification & Currency / Language / Theme Bar -->
+  <div class="top-bar">
+    <div class="top-bar-inner">
+      <div class="top-notice">
+        <span data-i18n="topNotice">✨ Meilleur Tarif Garanti en Réservation Directe | Petit-déjeuner Flottant Offert dès 3 nuits</span>
+      </div>
+      <div class="top-controls">
+        <!-- Interactive 3 Theme Switcher -->
+        <div class="theme-selector-group" id="theme-selector" aria-label="Choisir le thème de couleur">
+          <button type="button" class="theme-pill-btn btn-theme-blue active" data-theme="blue" title="Thème Bleu Océan (Andaman)">
+            <span class="color-dot"></span> Bleu
+          </button>
+          <button type="button" class="theme-pill-btn btn-theme-light" data-theme="light" title="Thème Clair (Sable Blanc & Ivoire)">
+            <span class="color-dot"></span> Clair
+          </button>
+          <button type="button" class="theme-pill-btn btn-theme-chocolate" data-theme="chocolate" title="Thème Chocolat (Moka & Teck Chaud)">
+            <span class="color-dot"></span> Chocolat
+          </button>
+        </div>
+
+        <div class="select-control">
+          <span>🌐</span>
+          <select id="lang-select" aria-label="Choisir la langue">
+            <option value="fr" selected>Français</option>
+            <option value="en">English</option>
+            <option value="th">ไทย</option>
+          </select>
+        </div>
+        <div class="select-control">
+          <span>💱</span>
+          <select id="currency-select" aria-label="Choisir la devise">
+            <option value="EUR" selected>EUR (€)</option>
+            <option value="THB">THB (฿)</option>
+            <option value="USD">USD ($)</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="#hero" class="brand">
+          <div class="brand-crest">A</div>
+          <div class="brand-text">
+            <span class="brand-name">Amala</span>
+            <span class="brand-subtitle">Grand Bleu Resort • Phuket</span>
+          </div>
+        </a>
+
+        <ul class="nav-menu">
+          <li><a href="#about" class="nav-link" data-i18n="navHotel">L'Hôtel</a></li>
+          <li><a href="#villas" class="nav-link" data-i18n="navVillas">Suites & Villas</a></li>
+          <li><a href="#dining" class="nav-link" data-i18n="navDining">Restaurant & Bar</a></li>
+          <li><a href="#experiences" class="nav-link" data-i18n="navExperiences">Expériences</a></li>
+          <li><a href="#location" class="nav-link" data-i18n="navLocation">Accès & Navettes</a></li>
+          <li><a href="#reviews" class="nav-link" data-i18n="navReviews">Avis</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <div class="navbar-theme-pills" aria-label="Choisir le thème">
+            <button type="button" class="theme-pill-btn btn-theme-blue active" data-theme="blue" title="Thème Bleu Océan">
+              <span class="color-dot"></span> Bleu
+            </button>
+            <button type="button" class="theme-pill-btn btn-theme-light" data-theme="light" title="Thème Clair">
+              <span class="color-dot"></span> Clair
+            </button>
+            <button type="button" class="theme-pill-btn btn-theme-chocolate" data-theme="chocolate" title="Thème Chocolat">
+              <span class="color-dot"></span> Chocolat
+            </button>
+          </div>
+          <button class="btn-luxury" onclick="prefillBooking('deluxe-ocean-pool-suite')" data-i18n="navBookBtn">
+            Réserver
+          </button>
+          <button class="menu-toggle" aria-label="Menu Mobile">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-wrapper">
+      <img src="assets/images/hero.jpg" alt="Amala Grand Bleu Resort Phuket Pool Villa" class="hero-img">
+      <div class="hero-overlay"></div>
+    </div>
+
+    <div class="container hero-content">
+      <div class="badge-luxury">
+        <span class="dot"></span>
+        <span data-i18n="heroBadge">Boutique Resort & Villas Privées • Kamala, Phuket</span>
+      </div>
+
+      <h1 class="hero-title" data-i18n="heroTitle">
+        L'Exclusivité des Collines de Kamala avec <span>Piscine Privée</span>
+      </h1>
+
+      <p class="hero-subtitle" data-i18n="heroSubtitle">
+        Perché au-dessus de la baie turquoise d'Andaman, l'Amala Grand Bleu Resort offre un sanctuaire intimiste de villas privées avec vue panoramique et service 5 étoiles.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#villas" class="btn-luxury" data-i18n="heroCtaDiscover">Explorer les Villas</a>
+        <a href="#booking-bar" class="btn-secondary" data-i18n="heroCtaBook">Vérifier les Prix & Disponibilités</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Booking Engine Bar -->
+  <div class="booking-bar-wrapper" id="booking-bar">
+    <div class="container">
+      <div class="booking-bar">
+        <div class="booking-item">
+          <label class="booking-label" data-i18n="checkInLabel">
+            📅 Arrivée
+          </label>
+          <div class="booking-input-wrap">
+            <input type="date" id="bar-checkin" required>
+          </div>
+        </div>
+
+        <div class="booking-item">
+          <label class="booking-label" data-i18n="checkOutLabel">
+            📅 Départ
+          </label>
+          <div class="booking-input-wrap">
+            <input type="date" id="bar-checkout" required>
+          </div>
+        </div>
+
+        <div class="booking-item">
+          <label class="booking-label" data-i18n="guestsLabel">
+            👥 Voyageurs
+          </label>
+          <div class="booking-input-wrap">
+            <select id="bar-guests">
+              <option value="2">2 Adultes</option>
+              <option value="3">3 Adultes</option>
+              <option value="4">4 Adultes (Famille)</option>
+              <option value="8">6 à 8 Invités (Grande Villa)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="booking-item">
+          <label class="booking-label" data-i18n="villaTypeLabel">
+            🏡 Catégorie
+          </label>
+          <div class="booking-input-wrap">
+            <select id="bar-category">
+              <option value="deluxe-ocean-pool-suite">Suite Deluxe Vue Mer</option>
+              <option value="grand-ocean-pool-suite">Grand Seaview Pool Suite</option>
+              <option value="four-bedroom-grand-villa">Villa Royale 4 Chambres</option>
+            </select>
+          </div>
+        </div>
+
+        <button class="btn-luxury" id="bar-search-btn" data-i18n="searchBtn">
+          Voir les Tarifs
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Key Highlights Strip -->
+  <section class="highlights-section">
+    <div class="container">
+      <div class="highlights-grid">
+        <div class="highlight-card">
+          <div class="highlight-icon">🏊‍♂️</div>
+          <div>
+            <h3 class="highlight-title" data-i18n="hlPoolTitle">100% Piscines Privées</h3>
+            <p class="highlight-desc" data-i18n="hlPoolDesc">Chaque suite dispose d'une piscine privative sur terrasse</p>
+          </div>
+        </div>
+
+        <div class="highlight-card">
+          <div class="highlight-icon">🌅</div>
+          <div>
+            <h3 class="highlight-title" data-i18n="hlViewTitle">Vue Mer Panoramique</h3>
+            <p class="highlight-desc" data-i18n="hlViewDesc">Surplombant la magnifique baie de Kamala et ses couchers de soleil</p>
+          </div>
+        </div>
+
+        <div class="highlight-card">
+          <div class="highlight-icon">🍽️</div>
+          <div>
+            <h3 class="highlight-title" data-i18n="hlDiningTitle">Restaurant Certifié Halal</h3>
+            <p class="highlight-desc" data-i18n="hlDiningDesc">Cuisine thaïe raffinée, indienne & internationale 7h - 22h30</p>
+          </div>
+        </div>
+
+        <div class="highlight-card">
+          <div class="highlight-icon">🚐</div>
+          <div>
+            <h3 class="highlight-title" data-i18n="hlShuttleTitle">Navettes Plage & Patong</h3>
+            <p class="highlight-desc" data-i18n="hlShuttleDesc">Service de transport direct pour Kamala Beach et Patong</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visuals">
+          <div class="about-main-img-wrap">
+            <img src="assets/images/grand-villa.jpg" alt="Amala Phuket Architecture" class="about-main-img">
+          </div>
+          <div class="about-float-card">
+            <div class="float-badge-icon">⭐</div>
+            <div>
+              <div class="float-badge-title">Excellence Hôtelière</div>
+              <div class="float-badge-sub">Intimité & Sérénité Garantie</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-content">
+          <span class="section-badge" data-i18n="aboutBadge">Sanctuaire Intimiste</span>
+          <h2 class="section-title" data-i18n="aboutTitle">Une Retraite de Sérénité entre Ciel et Mer d'Andaman</h2>
+          <p class="about-text" data-i18n="aboutText1">
+            Niché sur les hauteurs luxuriantes de Kamala, l'Amala Grand Bleu Resort vous plonge dans un havre de paix tropical. Conçu pour les couples, lunes de miel et familles en quête d'intimité totale, chaque recoin a été pensé pour fusionner architecture contemporaine et hospitalité thaïlandaise légendaire.
+          </p>
+          <p class="about-text" data-i18n="aboutText2">
+            Détendez-vous au bord de votre propre piscine à débordement privée avec vue plongeante sur l'océan, dégustez un petit-déjeuner flottant au réveil, et rejoignez l'animation de Patong ou le sable blanc de Kamala Beach en quelques minutes grâce à nos navettes privées.
+          </p>
+
+          <div class="stats-grid">
+            <div class="stat-item">
+              <span class="stat-number">24+</span>
+              <span class="stat-label" data-i18n="aboutStat1">Suites & Villas</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">100%</span>
+              <span class="stat-label" data-i18n="aboutStat2">Piscines Privées</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">4.8★</span>
+              <span class="stat-label" data-i18n="aboutStat3">Note Moyenne</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">24/7</span>
+              <span class="stat-label" data-i18n="aboutStat4">Service & Sécurité</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Accommodations / Villas Section -->
+  <section class="villas-section" id="villas">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge" data-i18n="villasBadge">Hébergements d'Exception</span>
+        <h2 class="section-title" data-i18n="villasTitle">Nos Suites & Villas avec Piscine Privée</h2>
+        <p class="section-subtitle" data-i18n="villasSubtitle">
+          Chaque hébergement est une oasis d'intimité dotée d'une terrasse spacieuse, d'une piscine privative et d'équipements de luxe.
+        </p>
+      </div>
+
+      <div class="villa-filters">
+        <button class="filter-btn active" data-filter="all" data-i18n="filterAll">Toutes nos Suites</button>
+        <button class="filter-btn" data-filter="seaview" data-i18n="filterSeaview">Vue Mer & Océan</button>
+        <button class="filter-btn" data-filter="grand" data-i18n="filterGrand">Grandes Villas (2 à 4 Chambres)</button>
+      </div>
+
+      <div class="villas-grid" id="villas-container">
+        <!-- Rendered dynamically by main.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Dining & Gastronomy Section -->
+  <section class="dining-section" id="dining">
+    <div class="container">
+      <div class="dining-grid">
+        <div class="dining-content">
+          <span class="section-badge" data-i18n="diningBadge">Saveurs & Gastronomie</span>
+          <h2 class="section-title" data-i18n="diningTitle">Restaurant Panoramique & Bar Le Grand Bleu</h2>
+          <p class="about-text" data-i18n="diningSubtitle">
+            Une cuisine savoureuse certifiée Halal célébrant les épices thaïlandaises et la gastronomie internationale avec vue imprenable sur le coucher de soleil.
+          </p>
+
+          <div class="dining-items">
+            <div class="dining-feature-box">
+              <div class="dining-icon">🦐</div>
+              <div>
+                <h4 class="dining-feature-title" data-i18n="diningItem1Title">Cuisine Thaïe & Fusion Halal</h4>
+                <p class="dining-feature-desc" data-i18n="diningItem1Desc">Fruits de mer frais d'Andaman, currys parfumés, Pad Thaï royal et spécialités indiennes préparées par nos chefs.</p>
+              </div>
+            </div>
+
+            <div class="dining-feature-box">
+              <div class="dining-icon">🥐</div>
+              <div>
+                <h4 class="dining-feature-title" data-i18n="diningItem2Title">Le Célèbre Petit-Déjeuner Flottant</h4>
+                <p class="dining-feature-desc" data-i18n="diningItem2Desc">Savourez viennoiseries, fruits tropicaux, crêpes et jus frais servis sur un plateau flottant au cœur de votre piscine.</p>
+              </div>
+            </div>
+
+            <div class="dining-feature-box">
+              <div class="dining-icon">🍸</div>
+              <div>
+                <h4 class="dining-feature-title" data-i18n="diningItem3Title">Bar Panoramique & Sunset Happy Hour</h4>
+                <p class="dining-feature-desc" data-i18n="diningItem3Desc">Cocktails signature exotiques, mocktails rafraîchissants et formule 1 acheté = 1 offert pendant le coucher de soleil.</p>
+              </div>
+            </div>
+
+            <div class="dining-feature-box">
+              <div class="dining-icon">🕯️</div>
+              <div>
+                <h4 class="dining-feature-title" data-i18n="diningItem4Title">Dîner Romantique Privé en Villa</h4>
+                <p class="dining-feature-desc" data-i18n="diningItem4Desc">Service en chambre haut de gamme et mise en place romantique aux chandelles sur votre terrasse privée.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dining-visuals">
+          <img src="assets/images/restaurant.jpg" alt="Restaurant Amala Sunset Lounge" class="dining-img-main">
+          <img src="assets/images/floating-breakfast.jpg" alt="Petit déjeuner flottant Amala Phuket" class="dining-img-secondary">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Exclusive Experiences Section -->
+  <section class="experiences-section" id="experiences">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge" data-i18n="expBadge">Expériences Uniques</span>
+        <h2 class="section-title" data-i18n="expTitle">Des Instants Inoubliables à Phuket</h2>
+        <p class="section-subtitle" data-i18n="expSubtitle">
+          Personnalisez votre séjour avec notre équipe conciergerie dédiée disponible 24h/24.
+        </p>
+      </div>
+
+      <div class="experiences-grid">
+        <div class="exp-card">
+          <img src="assets/images/floating-breakfast.jpg" alt="Floating breakfast" class="exp-card-bg">
+          <div class="exp-card-overlay"></div>
+          <div class="exp-card-content">
+            <span class="exp-tag">Signature Resort</span>
+            <h3 class="exp-title">Petit-déjeuner Flottant</h3>
+            <p class="exp-desc">L'expérience instagrammable incontournable servie directement dans l'eau de votre piscine privée.</p>
+            <a href="#booking-bar" class="exp-link">Réserver avec votre séjour →</a>
+          </div>
+        </div>
+
+        <div class="exp-card">
+          <img src="assets/images/restaurant.jpg" alt="Sunset Lounge" class="exp-card-bg">
+          <div class="exp-card-overlay"></div>
+          <div class="exp-card-content">
+            <span class="exp-tag">Sunset & Ambiance</span>
+            <h3 class="exp-title">Cocktails au Crépuscule</h3>
+            <p class="exp-desc">Admirez le soleil plongeant dans la mer d'Andaman tout en dégustant nos cocktails signatures.</p>
+            <a href="#dining" class="exp-link">Découvrir le Bar →</a>
+          </div>
+        </div>
+
+        <div class="exp-card">
+          <img src="assets/images/deluxe-suite.jpg" alt="Bien-être" class="exp-card-bg">
+          <div class="exp-card-overlay"></div>
+          <div class="exp-card-content">
+            <span class="exp-tag">Bien-être & Sérénité</span>
+            <h3 class="exp-title">Massages Thaïlandais en Villa</h3>
+            <p class="exp-desc">Détendez-vous avec des soins traditionnels prodigués par nos thérapeutes experts dans votre intimité.</p>
+            <a href="#booking-bar" class="exp-link">En savoir plus →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location & Shuttle Section -->
+  <section class="location-section" id="location">
+    <div class="container">
+      <div class="location-grid">
+        <div class="location-info">
+          <span class="section-badge" data-i18n="locationBadge">Situation Géographique</span>
+          <h2 class="section-title" data-i18n="locationTitle">Idéalement Situé à Kamala, Phuket</h2>
+          <p class="about-text" data-i18n="locationSubtitle">
+            Le calme absolu sur les hauteurs, à seulement quelques minutes des plages et des attractions majeures.
+          </p>
+
+          <div class="location-card-list">
+            <div class="loc-item">
+              <span class="loc-time" data-i18n="loc1Time">5 à 7 min</span>
+              <span class="loc-name" data-i18n="loc1">Plage de Kamala & Café Del Mar</span>
+            </div>
+            <div class="loc-item">
+              <span class="loc-time" data-i18n="loc2Time">10 à 12 min</span>
+              <span class="loc-name" data-i18n="loc2">Patong Beach & Vie Nocturne</span>
+            </div>
+            <div class="loc-item">
+              <span class="loc-time" data-i18n="loc3Time">8 min</span>
+              <span class="loc-name" data-i18n="loc3">Phuket FantaSea / Carnival Magic</span>
+            </div>
+            <div class="loc-item">
+              <span class="loc-time" data-i18n="loc4Time">40 min</span>
+              <span class="loc-name" data-i18n="loc4">Aéroport International de Phuket (HKT)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="location-map-card">
+          <div class="map-badge">📍 Adresse & Coordonnées</div>
+          <h3 class="map-address">Amala Grand Bleu Resort Hilltops</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 16px;">
+            Kamala Hillside, Kathu District, Phuket 83120, Thaïlande
+          </p>
+          <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6;">
+            📞 Téléphone : +66 76 390 906<br>
+            💬 WhatsApp : +66 95 336 2244<br>
+            ✉️ Email : info@amalagrandbleu.com
+          </p>
+
+          <div class="shuttle-notice-box">
+            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+            <p class="shuttle-text">
+              <strong>Service Navette Gratuit :</strong> Notre resort étant situé sur une colline panoramique préservée, des départs réguliers en navette privée desservent le centre et la plage de Kamala, ainsi que la ville de Patong.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Guest Reviews / Testimonials -->
+  <section class="reviews-section" id="reviews">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge" data-i18n="reviewsBadge">Témoignages Clients</span>
+        <h2 class="section-title" data-i18n="reviewsTitle">Ce Que Nos Hôtes Disent de Nous</h2>
+        <p class="section-subtitle" data-i18n="reviewsSubtitle">
+          Des séjours inoubliables partagés par des voyageurs du monde entier.
+        </p>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div>
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">
+              "Un séjour magique pour notre voyage de noces ! La vue depuis notre piscine privée au coucher de soleil est tout simplement à couper le souffle. Le petit-déjeuner flottant était délicieux et le personnel d'une gentillesse incroyable."
+            </p>
+          </div>
+          <div class="review-author">
+            <div>
+              <div class="author-name">Alexandre & Sophie</div>
+              <div class="author-country">France 🇫🇷</div>
+            </div>
+            <div class="author-villa">Grand Seaview Suite</div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div>
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">
+              "Hôtel boutique calme et très préservé sur les collines. La navette pour la plage de Kamala et Patong fonctionne parfaitement. Le restaurant halal sur place propose des plats savoureux. Nous reviendrons sans hésiter !"
+            </p>
+          </div>
+          <div class="review-author">
+            <div>
+              <div class="author-name">David K.</div>
+              <div class="author-country">United Kingdom 🇬🇧</div>
+            </div>
+            <div class="author-villa">Deluxe Ocean Suite</div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div>
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">
+              "Intimité totale respectée dans la villa, nourriture 100% Halal d'une grande fraîcheur, et service 24h/24 très attentionné. Idéal pour les familles qui souhaitent la tranquillité tout en étant proches de la mer."
+            </p>
+          </div>
+          <div class="review-author">
+            <div>
+              <div class="author-name">Fatima & Omar</div>
+              <div class="author-country">Émirats Arabes Unis 🇦🇪</div>
+            </div>
+            <div class="author-villa">Villa Royale 4 Chambres</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title" data-i18n="faqTitle">Questions Fréquentes</h2>
+      </div>
+
+      <div class="faq-container">
+        <div class="faq-item active">
+          <button class="faq-question">
+            <span data-i18n="faqQ1">L'hôtel propose-t-il une navette vers la plage et Patong ?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p data-i18n="faqA1">Oui ! Nous mettons à disposition de nos clients un service de navette express vers Kamala Beach ainsi que vers Patong Beach à des horaires réguliers et sur demande.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span data-i18n="faqQ2">Toutes les chambres ont-elles une piscine privée ?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p data-i18n="faqA2">Absolument. La signature de l'Amala Grand Bleu Resort est que chaque suite et villa dispose de sa propre piscine privative sur sa terrasse.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span data-i18n="faqQ3">Le restaurant est-il certifié Halal ?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p data-i18n="faqA3">Oui, notre cuisine est certifiée 100% Halal. Nous proposons également des options végétariennes, sans gluten et internationales adaptées à tous nos convives.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span data-i18n="faqQ4">Comment réserver le petit-déjeuner flottant ?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p data-i18n="faqA4">Vous pouvez le réserver directement en ligne lors de votre réservation de séjour, ou auprès de la réception la veille avant 20h00.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand">
+            <div class="brand-crest">A</div>
+            <div class="brand-text">
+              <span class="brand-name">Amala</span>
+              <span class="brand-subtitle">Grand Bleu Resort • Phuket</span>
+            </div>
+          </div>
+          <p class="footer-brand-desc" data-i18n="footerDesc">
+            Amala Grand Bleu Resort Hilltops est un resort boutique de luxe situé à Kamala, Phuket, offrant des villas privées exclusives avec vue imprenable sur la mer d'Andaman.
+          </p>
+          <div class="footer-socials">
+            <a href="#" class="social-btn" aria-label="Facebook">FB</a>
+            <a href="#" class="social-btn" aria-label="Instagram">IG</a>
+            <a href="#" class="social-btn" aria-label="TripAdvisor">TA</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#about" data-i18n="navHotel">L'Hôtel</a></li>
+            <li><a href="#villas" data-i18n="navVillas">Suites & Villas</a></li>
+            <li><a href="#dining" data-i18n="navDining">Restaurant & Bar</a></li>
+            <li><a href="#experiences" data-i18n="navExperiences">Expériences</a></li>
+            <li><a href="#location" data-i18n="navLocation">Accès & Navettes</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title" data-i18n="contactTitle">Contact</h4>
+          <div class="footer-contact-item">
+            <span>📍</span>
+            <span>Kamala Hilltop, Phuket 83120, Thaïlande</span>
+          </div>
+          <div class="footer-contact-item">
+            <span>📞</span>
+            <span>+66 76 390 906</span>
+          </div>
+          <div class="footer-contact-item">
+            <span>💬</span>
+            <span>+66 95 336 2244</span>
+          </div>
+          <div class="footer-contact-item">
+            <span>✉️</span>
+            <span>info@amalagrandbleu.com</span>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title" data-i18n="newsletterTitle">Privilèges Amala Club</h4>
+          <p style="color: var(--text-muted); font-size: 0.88rem;" data-i18n="newsletterDesc">
+            Inscrivez-vous pour recevoir -10% immédiats sur votre réservation et des offres exclusives.
+          </p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Votre adresse email" class="newsletter-input" required>
+            <button type="submit" class="btn-luxury" style="padding: 10px 18px; font-size: 0.8rem;" data-i18n="newsletterBtn">
+              S'inscrire
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Amala Grand Bleu Resort Phuket. <span data-i18n="rights">Tous droits réservés.</span></div>
+        <div style="display: flex; gap: 20px;">
+          <a href="#">Politique de Confidentialité</a>
+          <a href="#">Conditions de Réservation</a>
+          <a href="#">Mentions Légales</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Booking Wizard Modal -->
+  <div class="modal-overlay" id="booking-modal">
+    <div class="modal-card">
+      <button class="modal-close-btn" aria-label="Fermer la fenêtre">✕</button>
+      <div class="modal-body">
+        <h3 class="modal-title">Réservation Directe Sécurisée</h3>
+        <p class="modal-subtitle">Garantie Meilleur Tarif • Sans Frais Cachés • Confirmation Rapide</p>
+
+        <form id="booking-modal-form">
+          <div class="form-grid">
+            <div class="form-group" style="grid-column: span 2;">
+              <label class="form-label">Villa / Catégorie Sélectionnée</label>
+              <select id="modal-villa-select" class="form-control" required></select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Date d'Arrivée</label>
+              <input type="date" id="modal-checkin" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Date de Départ</label>
+              <input type="date" id="modal-checkout" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Nom & Prénom</label>
+              <input type="text" id="guest-name" class="form-control" placeholder="Jean Dupont" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Email de Confirmation</label>
+              <input type="email" id="guest-email" class="form-control" placeholder="jean.dupont@email.com" required>
+            </div>
+
+            <div class="form-group" style="grid-column: span 2;">
+              <label class="form-label">Numéro de Téléphone / WhatsApp</label>
+              <input type="tel" id="guest-phone" class="form-control" placeholder="+33 6 12 34 56 78" required>
+            </div>
+          </div>
+
+          <!-- Addon Options -->
+          <div class="form-addons">
+            <div class="addon-item">
+              <label class="addon-left" for="addon-floating">
+                <input type="checkbox" id="addon-floating" checked>
+                <span class="addon-name">Petit-déjeuner Flottant en Piscine</span>
+              </label>
+              <span class="addon-price">Offert dès 3 nuits (ou 1 500 ฿)</span>
+            </div>
+
+            <div class="addon-item">
+              <label class="addon-left" for="addon-transfer">
+                <input type="checkbox" id="addon-transfer">
+                <span class="addon-name">Transfert Privé Aéroport Phuket (HKT) Aller/Retour</span>
+              </label>
+              <span class="addon-price">+1 200 ฿</span>
+            </div>
+
+            <div class="addon-item">
+              <label class="addon-left" for="addon-romantic">
+                <input type="checkbox" id="addon-romantic">
+                <span class="addon-name">Pack Romantique (Pétales, Bougies & Bouteille de Bienvenue)</span>
+              </label>
+              <span class="addon-price">+2 500 ฿</span>
+            </div>
+          </div>
+
+          <!-- Live Summary -->
+          <div class="booking-summary-box">
+            <div class="summary-details">
+              <span style="font-size: 0.78rem; text-transform: uppercase; color: var(--gold-primary);">Total Estimé du Séjour</span>
+              <span id="summary-nights-count" class="summary-nights">Calcul en cours...</span>
+            </div>
+            <div id="summary-total-price" class="summary-total">--</div>
+          </div>
+
+          <div style="display: flex; gap: 14px; justify-content: flex-end;">
+            <button type="button" class="btn-secondary" onclick="closeModals()">Annuler</button>
+            <button type="submit" class="btn-luxury">Confirmer ma Demande de Réservation</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Villa Details Modal -->
+  <div class="modal-overlay" id="villa-details-modal">
+    <div class="modal-card">
+      <button class="modal-close-btn" aria-label="Fermer">✕</button>
+      <div class="modal-body" id="villa-details-content">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Theme Dock (Always Visible & Accessible) -->
+  <aside class="floating-theme-dock" id="floating-theme-dock" aria-label="Palette de couleur">
+    <div class="theme-dock-title">🎨 Thème</div>
+    <button type="button" class="dock-theme-btn btn-theme-blue active" data-theme="blue" title="Thème Bleu Océan (Andaman)">
+      <span class="dock-swatch blue-swatch"></span>
+      <span class="dock-label">Bleu</span>
+    </button>
+    <button type="button" class="dock-theme-btn btn-theme-light" data-theme="light" title="Thème Clair (Sable Blanc & Ivoire)">
+      <span class="dock-swatch light-swatch"></span>
+      <span class="dock-label">Clair</span>
+    </button>
+    <button type="button" class="dock-theme-btn btn-theme-chocolate" data-theme="chocolate" title="Thème Chocolat (Moka & Teck Chaud)">
+      <span class="dock-swatch chocolate-swatch"></span>
+      <span class="dock-label">Chocolat</span>
+    </button>
+  </aside>
+
+  <!-- Floating Direct WhatsApp Concierge Button -->
+  <div class="floating-actions">
+    <a href="https://wa.me/+66953362244?text=Reservation%20and%20Special%20Price%20Enquiry%0A%0AFirst%20Name:%20%0ALast%20Name:%20%0ACheck-in%20Date:%20%0ACheck-out%20Date:%20%0ARoom%20Type:%20%0ABreakfast:%20%0AWhatsApp%20Contact:%20%0AEmail%20Address:%20" target="_blank" rel="noopener" class="float-whatsapp" title="WhatsApp Conciergerie 24/7" aria-label="Discuter sur WhatsApp">
+      💬
+    </a>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/translations.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

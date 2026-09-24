@@ -1,0 +1,129 @@
+/* ==========================================================
+   RESPONSIVE DESIGN RULES FOR AMALA GRAND BLEU RESORT
+   ========================================================== */
+
+@media (max-width: 1100px) {
+  .highlights-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .booking-bar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .booking-bar .btn-luxury {
+    grid-column: span 2;
+  }
+
+  .villas-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .nav-menu {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: rgba(8, 20, 27, 0.98);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    flex-direction: column;
+    padding: 30px;
+    gap: 20px;
+    border-bottom: 1px solid var(--border-gold);
+    transform: translateY(-150%);
+    transition: transform 0.4s ease;
+    z-index: 98;
+  }
+
+  .nav-menu.open {
+    transform: translateY(0);
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .about-grid,
+  .dining-grid,
+  .location-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-float-card {
+    position: static;
+    margin-top: 20px;
+    max-width: 100%;
+  }
+
+  .dining-img-secondary {
+    position: static;
+    width: 100%;
+    height: 200px;
+    margin-top: 15px;
+  }
+
+  .experiences-grid,
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .top-bar-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+  }
+
+  .top-controls {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .booking-bar {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .booking-bar .btn-luxury {
+    grid-column: span 1;
+  }
+
+  .highlights-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .villas-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .location-card-list {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-body {
+    padding: 24px 18px;
+  }
+}
